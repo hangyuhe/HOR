@@ -1,6 +1,0 @@
-c:\users\lenovo\documents\visual studio 2013\Projects\hospital register\hospital register\bin\hospital register.dll.config
-c:\users\lenovo\documents\visual studio 2013\Projects\hospital register\hospital register\bin\hospital register.dll
-c:\users\lenovo\documents\visual studio 2013\Projects\hospital register\hospital register\bin\hospital register.pdb
-c:\users\lenovo\documents\visual studio 2013\Projects\hospital register\hospital register\obj\Debug\hospital register.csprojResolveAssemblyReference.cache
-c:\users\lenovo\documents\visual studio 2013\Projects\hospital register\hospital register\obj\Debug\hospital register.dll
-c:\users\lenovo\documents\visual studio 2013\Projects\hospital register\hospital register\obj\Debug\hospital register.pdb
