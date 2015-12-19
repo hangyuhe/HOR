@@ -141,7 +141,7 @@ namespace DataEngine
         public DataBase DeleteFrom(string table)
         {
             ClearCommd();
-            _commd += "DELETE FROM" + _space + table + _space;
+            _commd += "DELETE FROM" +  _space + table + _space;
             return this;
         }
 

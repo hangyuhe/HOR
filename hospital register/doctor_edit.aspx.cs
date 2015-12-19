@@ -11,7 +11,7 @@ namespace hospital_register
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Label1.Text = hospital_log_in.yiyuan;
         }
     }
 }

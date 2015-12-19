@@ -31,6 +31,7 @@
         </asp:Calendar>
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" style="z-index: 1; left: 490px; top: 202px; position: absolute; height: 28px" Text="预约" />
         <asp:Label ID="Label3" runat="server" ForeColor="Red" style="z-index: 1; left: 558px; top: 205px; position: absolute; width: 253px" Text="您不能完成预约，请先登录"></asp:Label>
+        <asp:Label ID="Label4" runat="server" style="z-index: 1; left: 122px; top: 65px; position: absolute" Text="无任何信息" Visible="False"></asp:Label>
     </form>
 </body>
 </html>

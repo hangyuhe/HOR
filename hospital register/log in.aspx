@@ -18,7 +18,7 @@
             <asp:TextBox ID="TextBox1" runat="server" style="z-index: 1; left: 258px; top: 116px; position: absolute"></asp:TextBox>
         </p>
         <asp:TextBox ID="TextBox2" runat="server" style="z-index: 1; left: 257px; top: 165px; position: absolute" TextMode="Password"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" style="z-index: 1; left: 492px; top: 144px; position: absolute" Text="登录" />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" style="z-index: 1; left: 492px; top: 144px; position: absolute; " Text="登录" />
         <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" style="z-index: 1; left: 392px; top: 254px; position: absolute; width: 43px; height: 20px" Text="返回" />
     </form>
 </body>

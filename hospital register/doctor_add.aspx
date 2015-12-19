@@ -28,14 +28,30 @@
         <asp:TextBox ID="TextBox3" runat="server" style="z-index: 1; left: 248px; top: 171px; position: absolute"></asp:TextBox>
         <asp:TextBox ID="TextBox4" runat="server" style="z-index: 1; left: 245px; top: 212px; position: absolute"></asp:TextBox>
         <asp:DropDownList ID="DropDownList2" runat="server" style="z-index: 1; left: 249px; top: 250px; position: absolute">
+            <asp:ListItem>医师</asp:ListItem>
             <asp:ListItem>主治医师</asp:ListItem>
-            <asp:ListItem>副主治医师</asp:ListItem>
-            <asp:ListItem>普通医师</asp:ListItem>
+            <asp:ListItem>副主任医师</asp:ListItem>
+            <asp:ListItem>主任医师</asp:ListItem>
         </asp:DropDownList>
-        <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource1" DataTextField="科室" DataValueField="id" style="z-index: 1; left: 250px; top: 294px; position: absolute">
+        <asp:Label ID="Label8" runat="server" style="z-index: 1; left: 171px; top: 334px; position: absolute" Text="擅长"></asp:Label>
+        <asp:TextBox ID="TextBox5" runat="server" style="z-index: 1; left: 248px; top: 328px; position: absolute; height: 19px; width: 286px" TextMode="MultiLine"></asp:TextBox>
+        <p>
+            <asp:Label ID="Label9" runat="server" style="z-index: 1; left: 128px; top: 375px; position: absolute; height: 18px" Text="可挂号开始时间"></asp:Label>
+        </p>
+        <asp:TextBox ID="TextBox6" runat="server" style="z-index: 1; left: 251px; top: 372px; position: absolute" TextMode="Date"></asp:TextBox>
+        <asp:Label ID="Label10" runat="server" style="z-index: 1; left: 126px; top: 413px; position: absolute" Text="可挂号终止时间"></asp:Label>
+        <asp:TextBox ID="TextBox7" runat="server" style="z-index: 1; top: 414px; position: absolute; left: 250px" TextMode="Date"></asp:TextBox>
+        <p>
+        <asp:Button ID="Button1" runat="server" style="z-index: 1; left: 652px; top: 369px; position: absolute" Text="添加" OnClick="Button1_Click" />
+        </p>
+        <asp:Label ID="Label11" runat="server" style="z-index: 1; left: 563px; top: 106px; position: absolute" Text="Label" Visible="False"></asp:Label>
+        <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="SqlDataSource1" DataTextField="id" DataValueField="id" style="z-index: 1; left: 249px; top: 291px; position: absolute">
         </asp:DropDownList>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" ProviderName="<%$ ConnectionStrings:ConnectionString.ProviderName %>" SelectCommand="SELECT * FROM [表1]"></asp:SqlDataSource>
-        <asp:Button ID="Button1" runat="server" style="z-index: 1; left: 523px; top: 293px; position: absolute" Text="添加" />
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:Web_AppointmentConnectionString %>" SelectCommand="SELECT [id] FROM [department] WHERE ([hospital_id] = @hospital_id)">
+            <SelectParameters>
+                <asp:ControlParameter ControlID="Label11" Name="hospital_id" PropertyName="Text" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
     </form>
 </body>
 </html>

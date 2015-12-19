@@ -17,8 +17,8 @@ namespace unit_test
             Program self = new Program();
             self.DataEngineConstructorTest();
             self.LocalDataEngineTest();
-            self.RemoteDataEngineTest();
-            self.CommunicationTest();
+            //self.RemoteDataEngineTest();
+            //self.CommunicationTest();
 
 
 
@@ -27,13 +27,17 @@ namespace unit_test
         void LocalDataEngineTest()
         {
             Engine eg = new Engine();
-            eg.Config("172.31.111.131", "test", "yf123456");
-            eg.DataBase.Select("dbo.[user].*").From("dbo.[user]").Finish();
+            eg.Config("10.138.111.60", "test", "yf123456");
+            //eg.DataBase.Select("dbo.[user].*").From("dbo.[user]").Finish();
+            //eg.DataBase.InsertIntoTable("dbo.[doctor]", new[] { "id", "name", "sex", "age", "telephone", "level", "department_id" }, new[] { "1", "12", "'男'", "22", "22", "22", "10001" }).Finish();
+            eg.DataBase.Update("dbo.[hospital]").Set("introduction", "'13211076'").Where("id='123'").Finish();
+            
             DataSet ds = eg.QueryDirectly();
             if (ds.GetXml() == XmlDatasetConvertor.ConvertXmlToDataSet(ds.GetXml()).GetXml())
             {
-                Console.WriteLine("xml to dataset convention succeed!");
+                Console.WriteLine(ds.GetXml());
             }
+            
         }
 
         void RemoteDataEngineTest()
@@ -62,7 +66,7 @@ namespace unit_test
             Engine eg = new Engine();
             eg.Config("172.31.111.131", "test", "yf123456");
             eg.SqlSeverUp();
-        }
+        }   
         void DataEngineConstructorTest()
         {
             Console.WriteLine(@"<?xml version=""1.0"" encoding=""utf-8""?>");

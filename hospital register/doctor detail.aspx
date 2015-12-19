@@ -18,7 +18,7 @@
         <asp:Label ID="Label4" runat="server" style="z-index: 1; left: 407px; top: 94px; position: absolute" Text="联系方式："></asp:Label>
         <asp:Label ID="Label5" runat="server" style="z-index: 1; left: 499px; top: 92px; position: absolute; height: 18px; width: 99px;" Text="Label"></asp:Label>
         <asp:Label ID="Label6" runat="server" style="z-index: 1; left: 390px; top: 123px; position: absolute; height: 15px" Text="擅长："></asp:Label>
-        <asp:Label ID="Label7" runat="server" style="z-index: 1; left: 441px; top: 125px; position: absolute" Text="Label"></asp:Label>
+        <asp:Label ID="Label7" runat="server" style="z-index: 1; left: 441px; top: 125px; position: absolute; height: 49px; width: 441px;" Text="Label"></asp:Label>
 
         <span style="font-size:32px;">&nbsp;&nbsp;&nbsp;</span>
 

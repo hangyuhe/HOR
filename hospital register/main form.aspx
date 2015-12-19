@@ -34,13 +34,13 @@
 <br /><br /><br />
          <p>
         <%  int i,j;
-            string h = @"北医院";
-            for  (i=0;i<3;i++)
+            string h = @"男医院";
+            for  (i=0;i<num/3;i++)
             {%>
-           <%      for (j=3*i;j<3*i+2;j++)
+           <%      for (j=3*i;j<3*i+1;j++)
             {%>
                 <span style="font-size:32px;">&nbsp;&nbsp;&nbsp;</span>
-                  <a href="hospital.aspx?hospital_name=<%=h%>" target="_blank" onmousedown="return _smartlog(this,'DOCN_1')"><%=h%></a>
+                  <a href="hospital.aspx?hospital_name=<%=h%>" target="_blank" ><%=x[j]%></a>
                
          <%    }
                
@@ -52,7 +52,22 @@
            
                 
                     
-        <%    }  %>
+        <%    } %>
+              
+          
+               <%
+                   int f;
+                   for (f=0;f<num;f++)
+                       {%>
+                       <span style="font-size:32px;">&nbsp;&nbsp;&nbsp;</span>
+                  <a href="hospital.aspx?hospital_name=<%=x[f]%>" target="_blank" ><%=x[f]%></a>
+                    <%   }
+                   
+                    %>
+
+
+
+            
     </p>
 
 
