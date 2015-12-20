@@ -25,7 +25,7 @@ namespace hospital_register
             eg.DataBase.Select("*").From("dbo.[doctor]").Where("id='" + doctor_detail.doctor_id + "'").Finish();
             dataset = eg.QueryDirectly();
            
-           // string a = dataset.Tables[0].Rows[0]["telephone"].ToString();
+            string a = dataset.Tables[0].Rows[0]["telephone"].ToString();
              start = Convert.ToDateTime(dataset.Tables[0].Rows[0]["start_time"]);
              end = Convert.ToDateTime(dataset.Tables[0].Rows[0]["end_time"]);
           

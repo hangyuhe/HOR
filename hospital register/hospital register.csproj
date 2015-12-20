@@ -57,12 +57,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="hospital_register.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin.aspx" />
@@ -171,6 +173,13 @@
     </Compile>
     <Compile Include="hospital_log in.aspx.designer.cs">
       <DependentUpon>hospital_log in.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="hospital_register.Master.cs">
+      <DependentUpon>hospital_register.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hospital_register.Master.designer.cs">
+      <DependentUpon>hospital_register.Master</DependentUpon>
     </Compile>
     <Compile Include="log in.aspx.cs">
       <DependentUpon>log in.aspx</DependentUpon>

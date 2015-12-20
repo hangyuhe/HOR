@@ -21,7 +21,7 @@ namespace hospital_register
             eg.Config(main_form.ip, "test", "yf123456");
 
             eg.DataBase.Select("*").From("dbo.[doctor]").Where("id='" + doctor_id + "'").Finish();
-            dataset = eg.QueryDirectly();
+           dataset = eg.QueryDirectly();
             Label1.Text = dataset.Tables[0].Rows[0]["name"].ToString();
             Label2.Text = dataset.Tables[0].Rows[0]["level"].ToString();
             Label5.Text = dataset.Tables[0].Rows[0]["telephone"].ToString();

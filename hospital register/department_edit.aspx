@@ -1,18 +1,22 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="department_edit.aspx.cs" Inherits="hospital_register.department_edit" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/hospital_register.Master" AutoEventWireup="true" CodeBehind="department_edit.aspx.cs" Inherits="hospital_register.department_edit" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
+    <asp:content runat="server" ContentPlaceHolderID ="ContentPlaceHolder1">
+        
+        <br />
+        <table class="auto-style8" style="right: 0px; left: 0px; clip: rect(auto, 0px, auto, 0px)" width = "100%">
+            <tr>
+                <td class="auto-style9">&nbsp;</td>
+                <td>
+                    <asp:Label ID="Label_page_signin_name" runat="server" Text="编辑科室信息" Font-Bold="False" Font-Names="华文仿宋" Font-Size="XX-Large"></asp:Label>
+                </td>
+            </tr>
+        </table>
+    </asp:content>
+    <asp:content runat="server" ContentPlaceHolderID ="ContentPlaceHolder2">
+        <div>
     
     </div>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AutoGenerateEditButton="True" style="z-index: 1; left: 94px; top: 125px; position: absolute; height: 115px; width: 718px" DataKeyNames="id" DataSourceID="SqlDataSource1">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" AutoGenerateEditButton="True" style="z-index: 1; left: 94px; top: 625px; position: absolute; height: 115px; width: 718px" DataKeyNames="id" DataSourceID="SqlDataSource1">
             <Columns>
                 <asp:CommandField ShowDeleteButton="True" />
                 <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id" />
@@ -41,18 +45,27 @@
                 <asp:Parameter Name="id" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:TextBox ID="TextBox1" runat="server" style="z-index: 1; left: 298px; top: 279px; position: absolute"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" style="z-index: 1; left: 614px; top: 394px; position: absolute; right: 263px" Text="增加科室" OnClick="Button1_Click" />
+        <asp:TextBox ID="TextBox1" runat="server" style="z-index: 1; left: 300px; top: 280px; position: absolute; width: 200px; height: 25px;" BorderStyle="Groove" BackColor="White" BorderColor="White" ForeColor="Black"></asp:TextBox>
+        <asp:Button ID="Button1" runat="server" style="z-index: 1; left: 300px; top: 505px; position: absolute; right: 333px; height: 25px;" Text="添加科室" OnClick="Button1_Click" Width="200px" ForeColor="#2B9BD6"/>
         <p>
             <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
         </p>
-        <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 219px; top: 280px; position: absolute" Text="科室id"></asp:Label>
-        <asp:Label ID="Label3" runat="server" style="z-index: 1; left: 207px; top: 317px; position: absolute; height: 16px; width: 85px" Text="科室名称"></asp:Label>
-        <asp:TextBox ID="TextBox2" runat="server" style="z-index: 1; left: 297px; top: 317px; position: absolute"></asp:TextBox>
-        <asp:Label ID="Label4" runat="server" style="z-index: 1; left: 209px; top: 373px; position: absolute; height: 17px" Text="科室简介"></asp:Label>
-        <asp:Label ID="Label5" runat="server" style="z-index: 1; left: 210px; top: 449px; position: absolute; height: 16px" Text="科室电话"></asp:Label>
-        <asp:TextBox ID="TextBox3" runat="server" style="z-index: 1; left: 297px; top: 348px; position: absolute; height: 71px; width: 210px" TextMode="MultiLine"></asp:TextBox>
-        <asp:TextBox ID="TextBox4" runat="server" style="z-index: 1; left: 298px; top: 449px; position: absolute"></asp:TextBox>
-    </form>
-</body>
-</html>
+        <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 190px; top: 280px; position: absolute" Text="科室编号" Font-Size="X-Large" ForeColor="#1892E3"></asp:Label>
+        <asp:Label ID="Label3" runat="server" style="z-index: 1; left: 190px; top: 320px; position: absolute" Text="科室名称" Font-Size="X-Large" ForeColor="#1892E3"></asp:Label>
+        <asp:TextBox ID="TextBox2" runat="server" style="z-index: 1; left: 300px; top: 320px; position: absolute; width: 200px; height: 25px;" BorderStyle="Groove" BackColor="White" BorderColor="White" ForeColor="Black"></asp:TextBox>
+        <asp:Label ID="Label4" runat="server" style="z-index: 1; left: 190px; top: 360px; position: absolute;" Text="科室简介" Font-Size="X-Large" ForeColor="#1892E3"></asp:Label>
+        <asp:Label ID="Label5" runat="server" style="z-index: 1; left: 190px; top: 450px; position: absolute;" Text="科室电话" Font-Size="X-Large" ForeColor="#1892E3"></asp:Label>>
+        <asp:TextBox ID="TextBox3" runat="server" style="z-index: 1; left: 300px; top: 360px; position: absolute; height: 75px; width: 300px" TextMode="MultiLine" BorderStyle="Groove"  BackColor="White" BorderColor="White" ForeColor="Black"></asp:TextBox>
+        <asp:TextBox ID="TextBox4" runat="server" style="z-index: 1; left: 300px; top: 450px; position: absolute;height:25px; width: 200px;" BorderStyle="Groove" BackColor="White" BorderColor="White" ForeColor="Black"></asp:TextBox>
+    </asp:content>
+
+<asp:Content ID="Content1" runat="server" contentplaceholderid="head">
+    <style type="text/css">
+        .auto-style8 {
+            width: 100%;
+        }
+    .auto-style9 {
+        width: 150px;
+    }
+    </style>
+</asp:Content>

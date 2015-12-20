@@ -68,5 +68,10 @@ namespace hospital_register
                 Response.Write("<script>alert('请选中一行!')</script>");
             }
         }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

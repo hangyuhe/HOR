@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="hospital_register.master.cs" Inherits="hospital_register.hospital_register" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style10 {
+            width: 100px;
+        }
+    </style>
+</head>
+<body style="background-image: url(&quot;image/polaroid.jpg&quot;)">
+    <form id="form1" runat="server">
+
+        <div style="padding: 3px; margin: -2px; background-color: #EAEFF0; font-size: large; width: auto; color: #000000; top: 0px;">
+            <table class="auto-style1" style="right: 0px; left: 0px; clip: rect(auto, 0px, auto, 0px); width: 100%;">
+                <tr>
+                    <td class="auto-style10">
+
+                    </td>
+                    <td class="auto-style2">您好，<asp:Label ID="Lable_user_name" runat="server" Text="Label"></asp:Label>&nbsp;</td>
+                    <td style="clip: rect(auto, 0px, auto, auto); text-align: right; right: 100px;" class="auto-style4">
+                         <asp:LinkButton ID="LinkButton_signin" runat="server" BorderStyle="None" Font-Underline="False" ForeColor="#0099E4" OnClick="LinkButton_signin_Click" >登录</asp:LinkButton>
+            &nbsp;<asp:LinkButton ID="LinkButton_signup" runat="server" Font-Underline="False" ForeColor="#5E99E8" OnClick="LinkButton_signup_Click">注册</asp:LinkButton>
+                    </td>
+                    <td style="width: 100px">
+
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+        <div style="border-style: 0; border-color: 0; border-width: 0px; padding: 20px 0px 10px 0px; margin: -2px; background-color: #F4F8F9; font-size: 36px;">
+
+            <table class="auto-style1" style="right: 0px; left: 0px; clip: rect(auto, 0px, auto, 0px); width: 100%;">
+                <tr>
+                    <td class="auto-style10">&nbsp;</td>
+                    <td class="auto-style5" >
+                         <asp:Image ID="Image1" runat="server" ImageUrl="image/tubiao.ico" Height="68px" Width="68px" />
+            &nbsp;<asp:Label ID="Label_sysname" runat="server" BorderStyle="None" Text="在线预约挂号系统" Font-Bold="False" Font-Italic="False" Font-Names="华文彩云" Font-Size="40px" ForeColor="#0099FF" Height="59px"></asp:Label>
+                  
+                    </td>
+                      <td class="auto-style6">
+
+                    </td>
+                    <td class="auto-style3">&nbsp;</td>
+                </tr>
+            </table>
+           
+        </div>
+        <div class="navigation" style="background-color: #F4F8F9">
+
+            
+
+            <table class="auto-style8" style="width: 100%">
+                <tr>
+                    <td class="auto-style10">
+                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                    </td>
+                    <td>
+                        <asp:Menu ID="Menu1" runat="server" BackColor="#F4F8F9" DataSourceID="SiteMapDataSource1" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Large" ForeColor="#284E98" Orientation="Horizontal" StaticDisplayLevels="2" StaticSubMenuIndent="10px">
+                <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#B5C7DE" />
+                <DynamicSelectedStyle BackColor="#507CD1" />
+                <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <StaticSelectedStyle BackColor="#507CD1" />
+            </asp:Menu>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+    <div style="position: fixed; bottom: 0px; font-size: medium; text-align: center; right: 0px; left: 0px;">
+        Copyright © 2015,Twelve Programmers, All Rights Reserved
+    </div>
+</body>
+</html>

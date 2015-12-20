@@ -1,31 +1,35 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="hospital.aspx.cs" Inherits="hospital_register.hospital" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/hospital_register.Master" AutoEventWireup="true" CodeBehind="hospital.aspx.cs" Inherits="hospital_register.hospital" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
+    <asp:content runat="server" ContentPlaceHolderID ="ContentPlaceHolder1">
+        
+        <br />
+        <table class="auto-style8" style="right: 0px; left: 0px; clip: rect(auto, 0px, auto, 0px)" width = "100%">
+            <tr>
+                <td class="auto-style10">&nbsp;</td>
+                <td>
+                    <asp:Label ID="Label_page_signin_name" runat="server" Text="医院详细信息" Font-Bold="False" Font-Names="华文仿宋" Font-Size="XX-Large"></asp:Label>
+                </td>
+            </tr>
+        </table>
+    </asp:content>
+    <asp:content runat="server" ContentPlaceHolderID ="ContentPlaceHolder2">
     <div>
     
     </div>
-        <asp:Label ID="Label1" runat="server" style="z-index: 1; left: 190px; top: 57px; position: absolute; width: 358px" Text=""></asp:Label>
-        <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 148px; top: 86px; position: absolute" Text="地址："></asp:Label>
-        <asp:Label ID="Label3" runat="server" style="z-index: 1; left: 219px; top: 86px; position: absolute" Text="北京市海淀区复兴路28号"></asp:Label>
-        <asp:Label ID="Label4" runat="server" style="z-index: 1; left: 147px; top: 125px; position: absolute" Text="电话："></asp:Label>
-        <asp:Label ID="Label5" runat="server" style="z-index: 1; left: 221px; top: 126px; position: absolute" Text="010-68182255"></asp:Label>
-        <asp:Label ID="Label6" runat="server" style="z-index: 1; left: 147px; top: 174px; position: absolute; right: 735px" Text="简介："></asp:Label>
-        <asp:Label ID="Label7" runat="server" style="z-index: 1; left: 215px; top: 164px; position: absolute; height: 65px;" Text=" 解放军总医院是全军规模最大的综合性医院，集医疗、保健、教学、科研于一体，是国家重要保健基地之一，负责中央、军委和总部的医疗保..."></asp:Label>
-        <asp:Label ID="Label8" runat="server" style="z-index: 1; left: 88px; top: 243px; position: absolute; width: 92px" Text="按科室挂号"></asp:Label>
-        <asp:DropDownList ID="DropDownList1" runat="server" style="z-index: 1; left: 365px; top: 279px; position: absolute">
+        <asp:Label ID="Label1" runat="server" style="z-index: 1; left: 189px; top: 274px; position: absolute; width: 358px" Font-Size="X-Large"></asp:Label>
+        <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 188px; top: 311px; position: absolute" Text="地址：" Font-Size="Large"></asp:Label>
+        <asp:Label ID="Label3" runat="server" style="z-index: 1; left: 237px; top: 312px; position: absolute" Text="北京市海淀区复兴路28号" Font-Size="Large"></asp:Label>
+        <asp:Label ID="Label4" runat="server" style="z-index: 1; left: 188px; top: 344px; position: absolute" Text="电话：" Font-Size="Large"></asp:Label>
+        <asp:Label ID="Label5" runat="server" style="z-index: 1; left: 239px; top: 344px; position: absolute; height: 18px;" Text="010-68182255" Font-Size="Large"></asp:Label>
+        <asp:Label ID="Label6" runat="server" style="z-index: 1; left: 189px; top: 372px; position: absolute; right: 585px" Text="简介：" Font-Size="Large"></asp:Label>
+        <asp:Label ID="Label7" runat="server" style="z-index: 1; left: 237px; top: 373px; position: absolute; height: 65px;" Text=" 解放军总医院是全军规模最大的综合性医院，集医疗、保健、教学、科研于一体，是国家重要保健基地之一，负责中央、军委和总部的医疗保..." Font-Size="Large"></asp:Label>
+        <asp:Label ID="Label8" runat="server" style="z-index: 1; left: 188px; top: 450px; position: absolute; width: 92px; height: 1px;" Text="按科室挂号" Font-Size="Large"></asp:Label>
+        <asp:DropDownList ID="DropDownList1" runat="server" style="z-index: 1; left: 290px; top: 448px; position: absolute" Font-Size="Large">
             <asp:ListItem>儿科</asp:ListItem>
             <asp:ListItem>外科</asp:ListItem>
         </asp:DropDownList>
         <p>
-            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" style="z-index: 1; left: 604px; top: 255px; position: absolute" Text="Button" />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" style="z-index: 1; left: 427px; top: 448px; position: absolute; width: 100px; height: 25px;" Text="Button" />
         </p>
 
 
@@ -64,7 +68,13 @@
                     <%   }
                    
                     %> 
+    </asp:content>
 
-    </form>
-</body>
-</html>
+     
+<asp:Content ID="Content1" runat="server" contentplaceholderid="head">
+    <style type="text/css">
+        .auto-style8 {
+            width: 100%;
+        }
+    </style>
+</asp:Content>

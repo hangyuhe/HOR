@@ -1,25 +1,39 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="log in.aspx.cs" Inherits="hospital_register.log_in" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/hospital_register.Master" CodeBehind="log_in.aspx.cs" Inherits="hospital_register.log_in" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>登录</title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
     
-    </div>
-        <asp:Label ID="Label1" runat="server" style="z-index: 1; left: 175px; top: 116px; position: absolute; height: 21px; width: 57px" Text="用户名"></asp:Label>
-        <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 178px; top: 169px; position: absolute; right: 591px; height: 26px" Text="密码"></asp:Label>
+    <asp:content runat="server" ContentPlaceHolderID ="ContentPlaceHolder1">
+        
+        <br />
+        <table class="auto-style8" style="right: 0px; left: 0px; clip: rect(auto, 0px, auto, 0px)" width = "100%">
+            <tr>
+                <td class="auto-style10">&nbsp;</td>
+                <td>
+                    <asp:Label ID="Label_page_signin_name" runat="server" Text="登录" Font-Bold="False" Font-Names="华文仿宋" Font-Size="XX-Large"></asp:Label>
+                </td>
+            </tr>
+        </table>
+    </asp:content>
+    <asp:content runat="server" ContentPlaceHolderID ="ContentPlaceHolder2">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>   
+        <asp:Label ID="Label1" runat="server" style="z-index: 1; left: 215px; top: 303px; position: absolute; height: 21px; width: 77px" Text="用户名" Font-Size="X-Large" ForeColor="#1892E3"></asp:Label>
+        <asp:Label ID="Label2" runat="server" style="z-index: 1; left: 235px; top: 350px; position: absolute; height: 26px" Text="密码" Font-Size="X-Large" ForeColor="#1892E4"></asp:Label>
         <p>
-            <asp:TextBox ID="TextBox1" runat="server" style="z-index: 1; left: 258px; top: 116px; position: absolute"></asp:TextBox>
+            <asp:TextBox ID="TextBox1" runat="server" style="z-index: 1; left: 306px; top: 297px; position: absolute; height: 25px; width: 200px;" BorderStyle="Groove" BackColor="White" BorderColor="White" ForeColor="Black"></asp:TextBox>
         </p>
-        <asp:TextBox ID="TextBox2" runat="server" style="z-index: 1; left: 257px; top: 165px; position: absolute" TextMode="Password"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" style="z-index: 1; left: 492px; top: 144px; position: absolute; " Text="登录" />
-        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" style="z-index: 1; left: 392px; top: 254px; position: absolute; width: 43px; height: 20px" Text="返回" />
-    </form>
-</body>
-</html>
+        <asp:TextBox ID="TextBox2" runat="server" style="z-index: 1; left: 306px; top: 347px; position: absolute; height: 25px; width: 200px;" TextMode="Password" BorderStyle="Groove" BorderColor="White"></asp:TextBox>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" style="z-index: 1; left: 305px; top: 397px; position: absolute; height: 27px; width: 93px;" Text="登录"  Height="25px" Width="80px" ForeColor="#2B9AD4" />
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" style="z-index: 1; left: 419px; top: 397px; position: absolute; width: 89px; height: 26px; right: 325px;" Text="返回" ForeColor="#2B9BD4" Width="80px" />
+  
+    </asp:content>
+
+     
+<asp:Content ID="Content1" runat="server" contentplaceholderid="head">
+    <style type="text/css">
+        .auto-style8 {
+            width: 100%;
+        }
+    </style>
+</asp:Content>
+
+
+     

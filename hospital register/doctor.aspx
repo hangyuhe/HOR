@@ -1,21 +1,20 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="doctor.aspx.cs" Inherits="hospital_register.doctor" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/hospital_register.Master" AutoEventWireup="true" CodeBehind="doctor.aspx.cs" Inherits="hospital_register.doctor" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
+    <asp:content runat="server" ContentPlaceHolderID ="ContentPlaceHolder1">
+        
+        <br />
+        <table class="auto-style8" style="right: 0px; left: 0px; clip: rect(auto, 0px, auto, 0px)" width = "100%">
+            <tr>
+                <td class="auto-style10">&nbsp;</td>
+                <td>
+                    <asp:Label ID="Label_page_signin_name" runat="server" Text="医生" Font-Bold="False" Font-Names="华文仿宋" Font-Size="XX-Large"></asp:Label>
+                </td>
+            </tr>
+        </table>
+    </asp:content>
+    <asp:content runat="server" ContentPlaceHolderID ="ContentPlaceHolder2">
         <p>
-            &nbsp;
-        </p>
-        <p>
-            <asp:Label ID="Label1" runat="server" Style="z-index: 1; left: 160px; top: 54px; position: absolute" Text="Label"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Style="z-index: 1; left: 117px; top: 292px; position: absolute" Text="Label"></asp:Label>
         </p>
         <p>
             &nbsp;
@@ -80,9 +79,14 @@
 
             </dt>
         </dl>
+    </asp:content>
 
+     
+<asp:Content ID="Content1" runat="server" contentplaceholderid="head">
+    <style type="text/css">
+        .auto-style8 {
+            width: 100%;
+        }
+    </style>
+</asp:Content>
 
-
-    </form>
-</body>
-</html>
